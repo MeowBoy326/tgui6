@@ -20,7 +20,13 @@
 
 #include <vector>
 
+#if defined __APPLE__
 #include <SDL2/SDL.h>
+#elif defined STEAMWORKS && defined __linux__
+#include <SDL2/SDL.h>
+#else
+#include <SDL.h>
+#endif
 
 #define TGUI6_NORMALISE_JOY_AXIS(value) ((float(value) + 32768.0f) / 65535.0f * 2.0f - 1.0f)
 
