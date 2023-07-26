@@ -1,9 +1,7 @@
 #ifndef TGUI6_SDL_H
 #define TGUI6_SDL_H
 
-#if defined __APPLE__
-#include <SDL2/SDL.h>
-#elif defined STEAMWORKS && defined __linux__
+#if defined __linux__ || defined __APPLE__
 #include <SDL2/SDL.h>
 #else
 #include <SDL.h>
